@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">PBLProject</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_quiz">Quiz</string>
+    <string name="title_contact">Contact Us</string>
+    <string name="title_intro">Welcome to the Event-finding Quiz</string>
 </resources>
