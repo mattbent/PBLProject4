@@ -4,23 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".QuizActivity">
+    tools:context=".ContactActivity">
 
     <android.support.v7.widget.AppCompatImageView
-        android:layout_width="274dp"
-        android:layout_height="151dp"
+        android:id="@+id/appCompatImageView"
+        android:layout_width="545dp"
+        android:layout_height="224dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:src="@drawable/fbla"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/group"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.209"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <android.support.v7.widget.AppCompatTextView
@@ -32,33 +33,64 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:autoSizeTextType="uniform"
-        android:text="@string/title_intro"
+        android:gravity="center"
+        android:text="@string/title_contact"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.636"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.144" />
+        app:layout_constraintVertical_bias="0.06" />
 
-    <android.support.v7.widget.AppCompatButton
-        android:layout_width="234dp"
-        android:layout_height="56dp"
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView2"
+        android:layout_width="81dp"
+        android:layout_height="54dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:src="@drawable/email"
         app:layout_constraintBottom_toTopOf="@+id/navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.852"
-        android:text="Begin"/>
+        app:layout_constraintVertical_bias="0.813" />
 
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView3"
+        android:layout_width="61dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/instagram"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.68" />
 
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="69dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/twitter"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.546" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
