@@ -4,4 +4,7 @@
     <string name="title_quiz">Quiz</string>
     <string name="title_contact">Contact Us</string>
     <string name="title_intro">Welcome to the Event-finding Quiz</string>
+    <string name="question_intro">Do you feel comfortable speaking in front of a small audience</string>
+    <string name="yes_button">Yes</string>
+    <string name="no_button">No</string>
 </resources>
