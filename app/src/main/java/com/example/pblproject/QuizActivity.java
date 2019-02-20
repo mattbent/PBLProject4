@@ -5,7 +5,7 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.Button;
 
 public class QuizActivity extends AppCompatActivity {
 
@@ -13,7 +13,7 @@ public class QuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
-        ImageButton beginButton = (ImageButton)findViewById(R.id.beginButton);
+        Button beginButton = findViewById(R.id.beginButton);
 
 
         beginButton.setOnClickListener(new View.OnClickListener() {
