@@ -22,15 +22,28 @@ public class BinaryQuestionTree {
             return new Node(data);
         }
 
-        int value = Integer.parseInt(place.substring(0,1));
+        int value = Integer.parseInt(String.valueOf(place.charAt(0)));
+        System.out.println("1".charAt(0));
+        System.out.println(place.charAt(0));
+        System.out.println(value);
 
         if (value == 1) {
-            current.left = addRecursive(current.left, place.substring(1), data);
-        } else if (value == 0) {
-            current.right = addRecursive(current.right, place.substring(1), data);
-        } else {
-            // value already exists
-            return current; // might cause trouble
+            if (place.length() == 1)
+            {
+                current.left = addRecursive(current.left, null, data);
+            }
+            else {
+                current.left = addRecursive(current.left, place.substring(1), data);
+            }
+        } else{
+            if (place.length() == 1)
+            {
+                current.right = addRecursive(current.right, null, data);
+            }
+            else {
+                current.right = addRecursive(current.right, place.substring(1), data);
+            }
+
         }
 
         return current;
