@@ -8,4 +8,5 @@
     <string name="question_intro">Do you feel comfortable speaking in front of a small audience</string>
     <string name="yes_button">Yes</string>
     <string name="no_button">No</string>
+    <string name="results">Results</string>
 </resources>

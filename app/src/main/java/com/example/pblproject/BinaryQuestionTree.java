@@ -2,7 +2,7 @@ package com.example.pblproject;
 
 public class BinaryQuestionTree {
 
-    class Node{
+    public static class Node{
         String data;
         Node left;
         Node right;
@@ -53,7 +53,7 @@ public class BinaryQuestionTree {
         question1 = addRecursive(question1, value, data);
     }
 
-    public BinaryQuestionTree createBinaryTree() {
+    public static BinaryQuestionTree createBinaryTree() {
         BinaryQuestionTree bt = new BinaryQuestionTree();
 
         bt.add(null, "Do you feel comfortable speaking " +
@@ -120,4 +120,5 @@ public class BinaryQuestionTree {
     public String getData(Node node){
         return  node.data;
     }
+
 }
