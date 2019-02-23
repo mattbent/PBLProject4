@@ -1,16 +1,18 @@
 package com.example.pblproject;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
-public class ResultsActivity extends AppCompatActivity {
+public class ResultsActivity extends AppCompatActivity implements View.OnClickListener{
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -41,6 +43,7 @@ public class ResultsActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         String results = getIntent().getStringExtra("results");
+        System.out.println(results);
 
         String[] resultsArray = results.split(",");
 
@@ -53,15 +56,29 @@ public class ResultsActivity extends AppCompatActivity {
 // Add Buttons
         for (int i = 0; i < resultsArray.length; i++){
             Button button = new Button(this);
-            button.setText(i);
+            button.setText(resultsArray[i]);
+            button.setId(i);
             linearLayout.addView(button);
-
+            button.setOnClickListener(this);
         }
 
-
-// Add the LinearLayout element to the ScrollView
-        scrollView.addView(linearLayout);
-
-
     }
+
+    @Override
+    public void onClick(View view) {
+
+        Button b = (Button) view;
+        String buttonText = b.getText().toString();
+        buttonText = buttonText.replaceAll("&()", "");
+        buttonText = buttonText.replaceAll("\\s", " ");
+        buttonText = buttonText.replaceAll(" ", "-");
+        buttonText = buttonText.toLowerCase();
+
+        Uri uri = Uri.parse("https://www.fbla-pbl.org/competitive-event/" + buttonText + "/"); // missing 'http://' will cause crashed
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
 }
+
+

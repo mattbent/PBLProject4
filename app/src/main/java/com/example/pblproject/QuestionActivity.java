@@ -70,26 +70,33 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         switch (view.getId()){
             case R.id.yesButton:
 
-                bt.question1 = bt.question1.left;
-                question.setText(bt.question1.data);
-                if(bt.question1.left == null){
+                if(bt.question1.left.left == null){
+                    System.out.println("here");
                     Intent intent = new Intent(getApplicationContext(), ResultsActivity.class);
-                    intent.putExtra("results", bt.question1.data);
+                    intent.putExtra("results", bt.question1.left.data);
                     startActivity(intent);
 
+                }
+                else {
+                    bt.question1 = bt.question1.left;
+                    question.setText(bt.question1.data);
                 }
 
                 break;
             case R.id.noButton:
-                bt.question1 = bt.question1.right;
-                question.setText(bt.question1.data);
-
-                if(bt.question1.left == null){
+                if(bt.question1.right.left == null){
+                    System.out.println("here");
                     Intent intent = new Intent(getApplicationContext(), ResultsActivity.class);
-                    intent.putExtra("results", bt.question1.data);
+                    intent.putExtra("results", bt.question1.right.data);
                     startActivity(intent);
 
                 }
+                else {
+                    bt.question1 = bt.question1.right;
+
+                    question.setText(bt.question1.data);
+                }
+
                 break;
         }
 
