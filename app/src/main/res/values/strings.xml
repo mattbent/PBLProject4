@@ -8,5 +8,9 @@
     <string name="question_intro">Do you feel comfortable speaking in front of a small audience</string>
     <string name="yes_button">Yes</string>
     <string name="no_button">No</string>
+    <string name="announcement">"3/21 at 7:00pm - Moe's Night\n 4/4 to 4/7 - State Conference \n 6/24 to 6/27 - National Conference"</string>
+    <string name="announcement_title">Announcements:</string>
     <string name="results">Results</string>
+    <string name="school_name">East Carolina University</string>
+
 </resources>
