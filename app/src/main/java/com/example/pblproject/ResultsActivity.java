@@ -69,7 +69,7 @@ public class ResultsActivity extends AppCompatActivity implements View.OnClickLi
 
         Button b = (Button) view;
         String buttonText = b.getText().toString();
-        buttonText = buttonText.replaceAll("&()", "");
+        buttonText = buttonText.replaceAll("[&()]", "");
         buttonText = buttonText.replaceAll("\\s", " ");
         buttonText = buttonText.replaceAll(" ", "-");
         buttonText = buttonText.toLowerCase();
