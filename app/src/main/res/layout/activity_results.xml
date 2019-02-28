@@ -17,18 +17,21 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="464dp"
         android:autoSizeTextType="uniform"
-        android:text="@string/results"
+        android:text="@string/results_title"
+        android:gravity="center"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.263" />
 
     <ScrollView
         android:id="@+id/result_buttons"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="454dp"
+
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -40,13 +43,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <LinearLayout
+            android:id="@+id/button_panel"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/button_panel"
             android:orientation="vertical">
 
         </LinearLayout>
-
 
 
     </ScrollView>

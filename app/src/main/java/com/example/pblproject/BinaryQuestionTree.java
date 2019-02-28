@@ -76,7 +76,7 @@ public class BinaryQuestionTree {
 
         bt.add("1011","Financial Analysis,Financial Services,Accounting Analysis");
 
-        bt.add("1010","Business Ethics(PBL),Business Sustainability,Emerging Business" +
+        bt.add("1010","Business Ethics (PBL),Business Sustainability,Emerging Business" +
                 " Issues (PBL),Business Law (PBL),Hospitality Management,Human Resource Management," +
                 "Management Analysis & Decision Making, Marketing Analysis & Decision making," +
                 "Parliamentary Procedure (PBL),Strategic Analysis & Decision making");

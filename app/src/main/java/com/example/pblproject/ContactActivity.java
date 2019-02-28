@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageButton;
 import android.view.View;
@@ -38,8 +39,12 @@ public class ContactActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
+
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        Menu menu = navigation.getMenu();
+        MenuItem menuItem = menu.getItem(2);
+        menuItem.setChecked(true);
 
         ImageButton instaButton = (ImageButton)findViewById(R.id.instaButton);
         ImageButton twitterButton = (ImageButton)findViewById(R.id.twitterButton);
