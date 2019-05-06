@@ -8,22 +8,24 @@
 
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/question"
-        android:layout_width="373dp"
-        android:layout_height="46dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
         android:autoSizeTextType="uniform"
         android:gravity="center"
         android:text="@string/question_intro"
         android:textColor="@android:color/black"
-        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/yesButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.263" />
+        app:layout_constraintVertical_bias="0.635" />
 
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/yesButton"
@@ -36,12 +38,12 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/yes_button"
-        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintBottom_toTopOf="@+id/noButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.419" />
+        app:layout_constraintVertical_bias="0.943" />
 
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/noButton"
@@ -59,7 +61,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.545" />
+        app:layout_constraintVertical_bias="0.568" />
 
     <android.support.v7.widget.AppCompatImageView
         android:layout_width="274dp"
